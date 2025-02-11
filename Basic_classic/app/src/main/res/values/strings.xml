@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Basic_classic</string>
+    <string name="title_1">Hello User</string>
+    <string name="btn_submit">Submit</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="dob">Date of Birth</string>
+    <string name="country">Country</string>
+</resources>
