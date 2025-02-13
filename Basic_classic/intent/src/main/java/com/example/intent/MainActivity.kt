@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
-        //implicit activity
+        //implicit activity to open a browser for a url
         binding.btnBrowser.setOnClickListener {
             val url = binding.url.text.toString()
             Log.d("URL",url)
@@ -54,6 +54,8 @@ class MainActivity : AppCompatActivity() {
                 binding.url.error = "Please enter a valid URL"
             }
         }
+
+
 
 
 
