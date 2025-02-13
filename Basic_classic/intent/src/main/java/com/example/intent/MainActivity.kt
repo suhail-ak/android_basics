@@ -32,11 +32,37 @@ class MainActivity : AppCompatActivity() {
             }
         }
         //implicit activity to open a browser for a url
+//        binding.btnBrowser.setOnClickListener {
+//            val url = binding.url.text.toString()
+//            Log.d("URL",url)
+//            if (url.isNotEmpty()) {
+//               val intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url))
+//                // Check if there is an app that can handle this intent
+//                if (intent.resolveActivity(packageManager) != null) {
+//                    // Show chooser dialog
+//                    val chooser = Intent.createChooser(intent, "Open with")
+//                    startActivity(chooser)
+//
+//                } else {
+//
+//                    // Handle the case where no app can handle the intent
+//                    Log.e("hello", "No application can handle this request.")
+//                }
+//
+//            }else {
+//                // Optionally, show a message to the user if the URL is empty
+//                binding.url.error = "Please enter a valid URL"
+//            }
+//        }
+        //open messageing app
         binding.btnBrowser.setOnClickListener {
             val url = binding.url.text.toString()
             Log.d("URL",url)
             if (url.isNotEmpty()) {
-               val intent =  Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                val intent =  Intent(Intent.ACTION_SEND)
+                intent.setType("text/plain")
+                intent.putExtra(Intent.EXTRA_TEXT,url)
+
                 // Check if there is an app that can handle this intent
                 if (intent.resolveActivity(packageManager) != null) {
                     // Show chooser dialog
