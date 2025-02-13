@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "Basic_classic"
 include(":app")
 include(":constraintlayout")
+include(":app:intent")
+include(":intent")
